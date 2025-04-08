@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pildid 3: SVG maja</title>
+  <style>
+    .cloud {animation: moveCloud 10s linear infinite;}
+
+    @keyframes moveCloud {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(100%);
+        }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <br>
+  <img src="../img/maja.png" alt="">
+  <h1>SVG </h1>
+  <ul>
+    <li><a href="http://tutorials.jenkov.com/svg/svg-coordinate-system.html">Paigutamine</a></li>
+    <li><a href="http://tutorials.jenkov.com/svg/circle-element.html">Ringid (uksenupp)</a></li>
+    <li><a href="http://tutorials.jenkov.com/svg/rect-element.html">Ruudud (aknad-uksed)</a></li>
+    <li><a href="http://tutorials.jenkov.com/svg/polyline-element.html">Hulkjoon (katus)</a></li>
+    <li><a href="http://tutorials.jenkov.com/svg/svg-gradients.html">Värvi maja (kasutades värviüleminekuid)</a></li>
+    <li><a href="https://jenkov.com/tutorials/svg/svg-transformation.html#translate">SVG elemendi asukoha muutmine</a></li>
+  </ul>
+  <br>
+  <div class="raam">
+    <svg width="800px" height="800px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+      <!-- taevas -->
+      <rect x="0" y="0" height="340" width="800" style="fill: aqua;"/>
+      <!-- maa -->
+      <rect x="0" y="340" height="460" width="800" style="fill: rgb(15, 157, 15);"/>
+      <!-- katus -->
+      <!-- points="x,y x,y ..."  -->
+      <polyline id="katus" points="45,304, 555,304, 409,229, 191,229, 45,304" stroke="black" stroke-width="1.5" stroke-opacity="1" style="fill: rgb(139, 59, 59);"/>
+      <!--<polyline id="vaike_katus" points=",305, 460,210, 555,305" style="fill:rgb(102, 57, 15)"/>  rgb(102, 57, 15)-->
+      <!-- lõõr -->
+      <rect x="205" y="184" height="45" width="34" stroke="black" stroke-width="1" style="fill:rgb(126, 108, 108)"/>
+      <!-- aur-->
+      <!-- <line id="aur"x1="212" y1="183" x2="216" y2="180" x3="220" y3="177" x4="224" y4="173"
+      style="stroke: rgb(243, 236, 236); stroke-width: 1.5"; />
+      <rect id="aur1" x="115" y="150" height="4" width="6" style="fill: rgb(41, 40, 40);";
+      <animateMotion
+        path="M4,-3"
+      /> -->
+      <!-- sein -->
+      <rect x="75" y="305" height="240" width="450" stroke="black" stroke-width="0.5" style="fill:orange"/>
+      <!-- uks -->
+      <rect x="400" y="413" height="130" width="70" stroke="black" stroke-width="0.5" style="fill:rgb(211, 86, 14)"/>
+      <!-- aknad -->
+      <rect x="130" y="360" height="100" width="80" stroke="black" stroke-width="1" style="fill: rgb(148, 193, 211)"/>
+      <rect x="260" y="360" height="100" width="80" stroke="black" stroke-width="1" style="fill: rgb(148, 193, 211)"/>
+      <!-- uksenupp -->
+      <circle cx="457" cy="485" r="5" stroke="black" stroke-width="0.5" style="fill:rgb(109, 51, 17)"/>
+      <g class="cloud">
+        <ellipse cx="50" cy="80" rx="40" ry="20" style="fill: rgb(240, 240, 240)"/>
+        <ellipse cx="100" cy="80" rx="40" ry="20" style="fill: rgb(240, 240, 240)"/>
+        <ellipse cx="75" cy="60" rx="50" ry="25" style="fill: rgb(240, 240, 240)"/>
+      </g>
+    </svg>
+  </div>
+</body>
+
+</html>
